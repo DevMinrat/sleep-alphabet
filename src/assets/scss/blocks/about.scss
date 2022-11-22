@@ -1,0 +1,108 @@
+.about {
+  position: relative;
+
+  padding-bottom: 20rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -18rem;
+    bottom: -1rem;
+    z-index: -1;
+    transform: rotate(-30deg);
+
+    width: 83.4rem;
+    height: 65.4rem;
+
+    background: url(../images/feather-tb.png) no-repeat;
+    background-size: cover;
+  }
+
+  .section-title {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -5rem;
+      top: 0;
+      z-index: 1;
+      transform: matrix(0.87, -0.5, 0.5, 0.87, 0, 0);
+
+      width: 3.6rem;
+      height: 4.4rem;
+
+      background: url(../images/icons/moon.svg) no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.about__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.about-main {
+  width: 100%;
+  max-width: 83rem;
+
+  line-height: 1.6;
+
+  padding: 4rem;
+
+  background: #ffffff;
+  border-radius: 4rem;
+}
+.about-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about-item {
+  padding: 3rem 6rem 3rem 3rem;
+
+  background: #ffffff;
+  border-radius: 4rem;
+
+  &:nth-child(2) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 3.05rem;
+      top: 2.7rem;
+      z-index: 1;
+
+      width: 9.4rem;
+      height: 12.4rem;
+
+      background: url(../images/icons/moon-star.png) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &:last-child {
+    color: white;
+
+    background: linear-gradient(90deg, #183097 0.04%, #726ab4 99.97%);
+
+    .about-item__num {
+      color: white;
+      opacity: 1;
+    }
+  }
+}
+.about-item__num {
+  font-weight: 700;
+  font-size: 20rem;
+  color: $primary;
+  opacity: 0.7;
+
+  margin-bottom: 1.2rem;
+}
+.about-item__descr {
+  text-align: right;
+}

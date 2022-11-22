@@ -1,7 +1,7 @@
 //= ../../../node_modules/swiper/swiper-bundle.js
+///= components/scrolllock.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  //= components/scroll-lock.js
   //= components/sliders.js
 
   // header functional
@@ -31,20 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.documentElement.scrollTop <= 50) {
       header.classList.add("top");
     }
-
-    const burger = document.querySelector(".burger-menu");
-    const menu = document.querySelector(".menu");
-
-    burger.addEventListener("click", () => {
-      burger.classList.toggle("menu-on");
-      menu.classList.toggle("active");
-
-      if (burger.classList.contains("menu-on")) {
-        scrollLock.disablePageScroll();
-      } else {
-        scrollLock.enablePageScroll();
-      }
-    });
   }
 
   // tabs
@@ -121,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let modal = document.querySelector(`[data-modalName='${modalName}']`);
 
         modal.classList.remove("hide");
-        scrollLock.disablePageScroll();
+        // scrollLock.disablePageScroll();
       });
     });
   }
@@ -132,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modals.forEach((el) => {
       el.querySelector("[data-close]").addEventListener("click", () => {
         el.classList.add("hide");
-        scrollLock.enablePageScroll();
+        // scrollLock.enablePageScroll();
       });
     });
   }
