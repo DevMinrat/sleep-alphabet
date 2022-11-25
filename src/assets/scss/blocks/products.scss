@@ -2,12 +2,25 @@
   padding-top: 19.7rem;
 
   margin-bottom: 20rem;
+
+  @include breakpoint($lg-bp) {
+    padding-top: 0;
+    margin-bottom: 15rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 10rem;
+  }
 }
 
 .products__inner {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+  }
 }
 
 .products-item {
@@ -17,6 +30,12 @@
 
   background: #ffffff;
   border-radius: 4rem;
+
+  @include breakpoint($sm-bp) {
+    padding: 2rem;
+
+    border-radius: 2rem;
+  }
 
   &:first-child {
     &::after {
@@ -32,6 +51,11 @@
 
       background: url(../images/icons/star-bg.svg) no-repeat;
       background-size: cover;
+
+      @include breakpoint($sm-bp) {
+        bottom: 7.6rem;
+        left: 27rem;
+      }
     }
   }
 }
@@ -42,6 +66,12 @@
   margin-bottom: 3rem;
 
   border-radius: 3rem;
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 1.5rem;
+
+    border-radius: 2.8rem;
+  }
 }
 .products-item__inner {
   position: relative;
@@ -50,19 +80,42 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 .products-item__descr {
   font-weight: 500;
   font-size: 2.4rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+  }
 }
 .products-item__link {
   font-size: 1.8rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: white;
+  text-align: center;
 
   padding: 1.5rem 2.2rem;
 
   background: linear-gradient(90deg, #ba32a6 0%, #ba32a6 100%);
   border-radius: 3rem;
+
+  transition: all 0.2s linear;
+
+  @include breakpoint($sm-bp) {
+    width: 100%;
+
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    color: white;
+    background: linear-gradient(180deg, #204a86 0%, #477dc8 100%);
+  }
 }

@@ -1,24 +1,27 @@
-// const materialsSlider = new Swiper(".materials-silder", {
-    // slidesPerView: "auto",
-    // spaceBetween: 37,
+let prodSliderThumbs = new Swiper(".product-slider__thumb", {
+  slidesPerView: 3,
+  slideToClickedSlide: true,
+  breakpoints: {
+    320: {
+      spaceBetween: 10,
+    },
+    500: {
+      spaceBetween: 20,
+    },
+  },
+  navigation: {
+    nextEl: ".slider-btn-next",
+    prevEl: ".slider-btn-prev",
+  },
+});
 
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   type: "progressbar",
-    // },
-
-    // navigation: {
-    //   nextEl: ".intro-slider__btn-next",
-    //   prevEl: ".intro-slider__btn-prev",
-    // },
-
-    // breakpoints: {
-    //   900: {
-    //     spaceBetween: 50,
-    //   },
-    //   1350: {
-    //     slidesPerView: "auto",
-    //     spaceBetween: 80,
-    //   },
-    // },
-//   });
+let prodSliderMain = new Swiper(".product-slider__main", {
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  slidesPerView: "auto",
+  thumbs: {
+    swiper: prodSliderThumbs,
+  },
+});

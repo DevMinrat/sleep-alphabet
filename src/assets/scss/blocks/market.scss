@@ -1,0 +1,151 @@
+.market {
+  position: relative;
+
+  padding-bottom: 21.2rem;
+
+  @include breakpoint($lg-bp) {
+    padding-bottom: 15rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding-bottom: 10rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -23rem;
+    bottom: -15rem;
+    z-index: -1;
+    transform: rotate(218deg);
+
+    width: 81.3rem;
+    height: 63.6rem;
+
+    background: url(../images/feather-tt.png) no-repeat;
+    background-size: cover;
+
+    @include breakpoint($sm-bp) {
+      width: 39rem;
+      height: 31rem;
+
+      left: -7rem;
+      bottom: -14rem;
+    }
+  }
+
+  .section-title {
+    position: relative;
+
+    text-align: center;
+
+    margin: 0 auto 3rem;
+
+    @include breakpoint($sm-bp) {
+      width: auto;
+
+      text-align: left;
+      font-size: 2.4rem;
+
+      margin: 0 0 2rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -8rem;
+      top: 0;
+      z-index: 1;
+      transform: matrix(-0.87, -0.5, 0.5, -0.87, 0, 0);
+
+      width: 4.9rem;
+      height: 6rem;
+
+      background: url(../images/icons/moon.svg) no-repeat;
+      background-size: cover;
+
+      @include breakpoint($sm-bp) {
+        display: none;
+      }
+    }
+  }
+}
+
+.market__inner {
+  position: relative;
+  overflow: hidden;
+
+  text-align: center;
+
+  padding: 6rem;
+
+  background: #ffffff;
+  border-radius: 4rem;
+
+  @include breakpoint($sm-bp) {
+    text-align: left;
+
+    padding: 3rem;
+
+    border-radius: 2rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -8rem;
+    bottom: -10rem;
+    transform: rotate(30deg);
+
+    width: 35rem;
+    height: 35rem;
+
+    background: url(../images/icons/star-bg.svg) no-repeat;
+    background-size: cover;
+
+    @include breakpoint($lg-bp) {
+      width: 30rem;
+      height: 30rem;
+    }
+
+    @include breakpoint($sm-bp) {
+      width: 10.6rem;
+      height: 10.6rem;
+
+      left: 23rem;
+      bottom: 19rem;
+    }
+  }
+}
+
+.market__descr {
+  margin-bottom: 3rem;
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 2rem;
+  }
+}
+
+.market-link {
+  display: inline-block;
+
+  width: max-content;
+
+  padding: 1rem 3rem;
+
+  border: 0.2rem solid #d8ecff;
+  border-radius: 5rem;
+
+  &:hover {
+    border-color: $primary;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 0.6rem 2.2rem;
+  }
+}
+
+.market-link__img {
+  width: 100%;
+  max-width: 23.1rem;
+}

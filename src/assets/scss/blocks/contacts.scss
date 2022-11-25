@@ -1,0 +1,190 @@
+.contacts__inner {
+  position: relative;
+
+  display: flex;
+  align-items: stretch;
+  gap: 16rem;
+
+  padding: 6rem;
+
+  background: linear-gradient(90deg, #183097 0.04%, #726ab4 99.97%);
+  border-radius: 4rem;
+
+  @include breakpoint($xl-bp) {
+    gap: 6rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column-reverse;
+    gap: 4rem;
+
+    border-radius: 2rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    gap: 2rem;
+
+    padding: 2rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 47rem;
+    top: 0;
+    z-index: 1;
+    transform: rotate(75deg);
+
+    width: 13.4rem;
+    height: 13.4rem;
+
+    background: url(../images/icons/star-bg.svg) no-repeat;
+    background-size: cover;
+
+    filter: brightness(2);
+
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 41rem;
+    bottom: 0;
+    z-index: 1;
+    transform: rotate(30deg);
+
+    width: 29rem;
+    height: 29rem;
+
+    background: url(../images/icons/star-bg.svg) no-repeat;
+    background-size: cover;
+
+    filter: brightness(2);
+
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
+  }
+}
+
+.contacts__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.contacts-data__item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  font-weight: 500;
+  font-size: 2.4rem;
+  color: white;
+
+  letter-spacing: 0.02em;
+
+  @include breakpoint($sm-bp) {
+    gap: 0.8rem;
+    font-size: 1.6rem;
+  }
+
+  & + & {
+    padding-top: 2rem;
+
+    @include breakpoint($sm-bp) {
+      padding-top: 1.5rem;
+    }
+  }
+
+  a {
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: white;
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.6rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & p a {
+    text-decoration: underline;
+  }
+}
+.contacts-data__item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 5rem;
+  height: 5rem;
+
+  border: 0.2rem solid white;
+  border-radius: 100%;
+
+  @include breakpoint($sm-bp) {
+    max-width: 3rem;
+    height: 3rem;
+
+    border-width: 0.1rem;
+  }
+
+  svg {
+    width: 100%;
+    max-width: 2.4rem;
+    height: 2.4rem;
+
+    stroke: white;
+    fill: none;
+
+    @include breakpoint($sm-bp) {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+}
+
+.contacts__footer-item {
+  color: white;
+
+  & + & {
+    margin-top: 1.5rem;
+  }
+}
+
+.contacts__map {
+  width: 100%;
+  max-width: 91.5rem;
+  height: 56rem;
+
+  @include breakpoint($xl-bp) {
+    max-width: 70rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    height: 40rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    height: 20.8rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 4rem;
+
+    @include breakpoint($sm-bp) {
+      border-radius: 2rem;
+    }
+  }
+}

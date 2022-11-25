@@ -1,11 +1,26 @@
 .overlay-bg {
   background: url(../images/intro/intro-overlay-bg.png) no-repeat;
   background-size: 192rem 170rem;
+  background-position: top center;
+
+  @include breakpoint($lg-bp) {
+    background-position: top right -35rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    background: url(../images/intro/intro-overlay-bg-mob.png) no-repeat;
+    background-size: 37.5rem 146.8rem;
+    background-position: top center;
+  }
 }
 
 .intro {
   padding-top: 20.6rem;
   padding-bottom: 14.6rem;
+
+  @include breakpoint($sm-bp) {
+    padding-top: 14rem;
+  }
 }
 
 .intro__inner {
@@ -36,6 +51,12 @@
     drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.03))
     drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1))
     drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+
+  @include breakpoint($lg-bp) {
+    position: static;
+
+    margin-bottom: 4rem;
+  }
 
   &::after {
     content: "";
@@ -82,11 +103,27 @@
   background-clip: text;
   -webkit-background-clip: text;
 
+  @include breakpoint($lg-bp) {
+    font-size: 7rem;
+
+    margin-bottom: 10rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 5.2rem;
+
+    margin-bottom: 24.5rem;
+  }
+
   & span {
     display: block;
 
     &:last-child {
       margin-left: 12rem;
+
+      @include breakpoint($sm-bp) {
+        margin-left: 0;
+      }
     }
   }
 }
@@ -98,6 +135,10 @@
 
   width: 100%;
   max-width: 83rem;
+
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .intro-benefits__item {
@@ -119,6 +160,12 @@
     0px 28px 11px rgba(0, 0, 0, 0.01);
   border-radius: 2rem;
 
+  @include breakpoint($sm-bp) {
+    min-height: 10rem;
+
+    padding: 2rem 3.4rem 1.8rem 9.1rem;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -133,9 +180,19 @@
   font-size: 3.2rem;
 
   margin-bottom: 1.2rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+
+    margin-bottom: 0.4rem;
+  }
 }
 .intro-benefits__item-descr {
   font-size: 1.8rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: max(12px, 1.4rem);
+  }
 }
 
 .ibi-c {
@@ -150,6 +207,14 @@
     height: 15.2rem;
 
     background-image: url(../images/intro/icon-c.svg);
+
+    @include breakpoint($sm-bp) {
+      left: -0.4rem;
+      top: 1.8rem;
+
+      width: 8.2rem;
+      height: 9.6rem;
+    }
   }
 }
 .ibi-k {
@@ -162,6 +227,14 @@
     height: 15.2rem;
 
     background-image: url(../images/intro/icon-k.svg);
+
+    @include breakpoint($sm-bp) {
+      left: 0;
+      top: 2.1rem;
+
+      width: 7.8rem;
+      height: 9.5rem;
+    }
   }
 }
 .ibi-x {
@@ -175,6 +248,13 @@
     height: 15.2rem;
 
     background-image: url(../images/intro/icon-x.svg);
+
+    @include breakpoint($sm-bp) {
+      left: -1.4rem;
+
+      width: 9rem;
+      height: 10.3rem;
+    }
   }
 }
 .ibi-o {
@@ -188,5 +268,13 @@
     height: 15.4rem;
 
     background-image: url(../images/intro/icon-o.svg);
+
+    @include breakpoint($sm-bp) {
+      left: -2.5rem;
+      top: -3rem;
+
+      width: 9.6rem;
+      height: 10.8rem;
+    }
   }
 }
